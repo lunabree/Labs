@@ -1,81 +1,281 @@
 <DOCTYPE html>
     <head>
         <title>"Aubrey's Link Bank"</title>
+        <link rel="stylesheet" href="styles.css">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Croissant+One&family=DM+Sans:opsz,wght@9..40,300&display=swap" rel="stylesheet">
     </head>
-    <body>
-        <h1>Aubrey's Link Bank</h1>
-        
-        <form>
-            <p>Search for links:</p>
-            <label for="search"></label>
-            <input type="text" id="search" name="search" placeholder="search..."/>
+    <style>
+        /* .h1{
+            color: rgb(146, 136, 193);
+            background-color: rgb(237, 237, 255);
+            font-family: 'Croissant One', cursive;
+        }
+        .description{
+            font-family: 'DM Sans', sans-serif;
+        }
+        .row {
+                margin: 40px auto;
+        }
+        .row > div{
+            background: lightblue;
+            padding: 10px;
+            border: 1px solid white;
+        } */
+        html {
+            background-color: rgb(218, 215, 245);
+        }
+        .container {
+            background-color: rgb(255, 255, 255);
+            border-width: 1px;
+            /* border-style:solid;
+            border-color:rgb(0, 0, 0); */
+            margin: 10px 225px;
+            padding: 50px;
+        }
+        .col {
+            border-width: 1px;
+            /* border-style:solid;
+            border-color:rgb(0, 0, 0); */
+        }
 
-        <p>Add filters:</p>
-            <input type="checkbox" name="Communication" value="Communication" id="option-1">
-            <label for="option-1">Communication</label>
-            <input type="checkbox" name="SAT" value="SAT" id="option-2">
-            <label for="option-2">SAT</label>
-            <input type="checkbox" name="Entertainment" value="Entertainment" id="option-3">
-            <label for="option-3">Entertainment</label>
-            <input type="checkbox" name="Computer Science" value="Computer Science" id="option-4">
-            <label for="option-4">Computer Science</label>
-            <input type="checkbox" name="BCA" value="BCA" id="option-5">
-            <label for="option-5">BCA</label>
-            <input type="checkbox" name="Textbook" value="Textbook" id="option-6">
-            <label for="option-6">Textbook</label>
-            <input type="checkbox" name="Math" value="Math" id="option-7">
-            <label for="option-7">Math</label>
-            <input type="checkbox" name="Education" value="Education" id="option-8">
-            <label for="option-8">Education</label>
-            <input type="checkbox" name="Robotics" value="Robotics" id="option-9">
-            <label for="option-9">Robotics</label>
+        .search-button{
+            margin: 0px 50px;
+            width:50px;
+        }
+        .filter{
+            margin: 0px 50px;
+            width:50px;
+        }
+        
+        
+    </style>
+    
+    <body>
+        <!-- Title Header -->
+        <div class="row indigo lighten-4 box valign-wrapper">
+            <h1 class="col s1"></h1>
+            <h1 class="col s8">Aubrey's Link Bank</h1>
+            <a href="#" class="btn-small indigo col s1 center-align">
+                <span><i class="material-icons">favorite</i></span>
+            </a>
+            <a href="#" class="btn-small indigo col s1 center-align">
+                <span><i class="material-icons ">send</i></span>        
+            </a>
+            <h1 class="col s1"></h1>
+        </div>
+
+        <div class="row indigo lighten-4 box valign-wrapper">
+            <h1 class="col s1"></h1>
+            <h3 class="col s10">All the daily links compiled to one page.</h3>
+            <h1 class="col s1"></h1>  
+        </div>
+
+        <form>
+            <div class="row container">
+                <a href="#" class="btn-small indigo col s1 search-button offset-s1">
+                    <i class="material-icons center-align">search</i>
+                </a>
+                <input 
+                    class="col s8"
+                    type="text" 
+                    id="search" 
+                    name="search" 
+                    placeholder="search for links..."
+                />
+                
+            </div>
+            <!-- <div class="row purple lighten-5 valign-wrapper">
+                <h1 class="col s1"></h1>
+                <h5 class="col s10">Filters</h5>
+                <h1 class="col s1"></h1>  
+            </div> -->
+            
+            <div class="row purple lighten-5 box valign-wrapper center-align">
+                
+                <p class="col s2">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Communication</span>
+                    </label>
+                </p>
+                <p class="col s1">
+                    <label>
+                        <input type="checkbox" />
+                        <span>SAT</span>
+                    </label>
+                </p>
+                <p class="col s2">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Entertainment</span>
+                    </label>
+                </p>
+                <p class="col s2">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Computer Science</span>
+                    </label>
+                </p>
+                <p class="col s1">
+                    <label>
+                        <input type="checkbox" />
+                        <span>BCA</span>
+                    </label>
+                </p>
+                <p class="col s2">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Textbook</span>
+                    </label>
+                </p>
+                <p class="col s1">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Math</span>
+                    </label>
+                </p>
+                <p class="col s2">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Education</span>
+                    </label>
+                </p>
+                <p class="col s2">
+                    <label>
+                        <input type="checkbox" />
+                        <span>Robotics</span>
+                    </label>
+                </p>
+            </div>
+                
         </form>
         
-
-        <a href="https://bca.schoology.com/login/ldap?&school=11897239">Schoology</a>
+        <div class="container center-align offset-s3">
+        <a href="https://bca.schoology.com/login/ldap?&school=11897239">
+            <img 
+            src="https://i0.wp.com/www.mpslakers.com/wp-content/uploads/2020/01/schoology-logo.png?fit=511%2C511&ssl=1" 
+            alt="Schoology" 
+            width="100"
+            />
+        </a>
+        <a href="https://prod.idp.collegeboard.org/">
+            <img 
+            src="https://resources.finalsite.net/images/f_auto,q_auto/v1641237113/southmontk12inus/lykadnt0znr0d1vvodlp/101-1011446_teen-center-sat-600600-college-board-acorn.png" 
+            alt="CollegeBoard" 
+            width="100"
+            />
+        </a>
+        <a href="https://ps001.bergen.org/public/home.html">
+            <img 
+            src="https://play-lh.googleusercontent.com/FfHxiXf0AEElwpDtQA-xZ0oViPXFvb9bMvDiLfwicGxDB9DHjwRGXfTPfub-vamgQik" 
+            alt="Powerschool" 
+            width="100"
+            />
+        </a>
+        <a href="https://outlook.office365.com/mail/inbox">
+            <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg.png" 
+            alt="Outlook" 
+            width="100"
+            />   
+        </a>
+        <a href="https://www.blinklearning.com/v/1693484008/themes/tmpux/launch.php#content">
+            <img 
+            src="https://play-lh.googleusercontent.com/yoEDOiqwz0g60l2rFEfMKrD-bc4gUmW2LlYQA63khLL22eFtbtytTSl5CSdVspZNw-U" 
+            alt="IB Spanish SL Textbook" 
+            width="100"
+            />
+        </a>
+        <a href="https://mylabmastering.pearson.com/?courseId=12504260&key=104121958222380778122023#/">
+            <img 
+            src="https://pbs.twimg.com/profile_images/1675046416899506177/quS5956E_400x400.png" 
+            alt="Biology Pearson Textbook" 
+            width="100"
+            /> 
+        </a>
         <br>
-        <a href="https://apstudents.collegeboard.org/">CollegeBoard</a>
+        <a href="https://www.khanacademy.org/profile/tenas0303/courses">
+            <img 
+            src="https://yt3.googleusercontent.com/ytc/APkrFKaHmx8qkQu272Abo2FF0ejEmqiBXwZAwPChz4aU=s900-c-k-c0x00ffffff-no-rj" 
+            alt="Khan Academy" 
+            width="100"
+            />
+        </a>
+        <a href="https://www.nationalgeographic.com/">
+            <img 
+            src="https://1000logos.net/wp-content/uploads/2021/04/National-Geographic-logo.png" 
+            alt="National Geographic" 
+            width="100"
+            /> 
+        </a>
+        <a href="https://www.aldaily.com/">
+            <img 
+            src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F037e7a96-5bd6-4624-850b-e2d07ef4f2f9_261x261.png" 
+            alt="Arts and Letters Daily" 
+            width="100"
+            /> 
+        </a>
+        <a href="https://youtube.com">
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/YouTube_social_white_square_%282017%29.svg/1200px-YouTube_social_white_square_%282017%29.svg.png"
+            alt="YouTube" 
+            width="100"
+            />
+        </a>
+        <a href="https://www.webtoons.com/en/">
+            <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/09/Naver_Line_Webtoon_logo.png"
+            alt="Webtoon" 
+            width="100"
+            />
+        </a>
+        <a href="https://signup.bergen.org/dashboard/">
+            BCA Dashboard
+        </a>
         <br>
-        <a href="https://ps001.bergen.org/public/home.html">Powerschool</a>
-        <br>
-        <a href="https://outlook.office365.com/mail/inbox">Outlook</a>
-        <br>
-        <a href="https://www.blinklearning.com/v/1693484008/themes/tmpux/launch.php#content">IB Spanish SL Textbook</a>
-        <br>
-        <a href="https://mylabmastering.pearson.com/?courseId=12504260&key=104121958222380778122023#/">Biology Pearson Textbook</a>
-        <br>
-        <a href="https://www.khanacademy.org/profile/tenas0303/courses">Khan Academy</a>
-        <br>
-        <a href="https://www.nationalgeographic.com/">National Geographic</a>
-        <br>
-        <a href="https://www.aldaily.com/">Arts and Literature Daily</a>
-        <br>
-        <a href="https://www.gutenberg.org/">Project Gutenberg</a>
-        <br>
-        <a href="https://youtube.com">YouTube</a>
-        <br>
-        <a href="https://www.webtoons.com/en/">Webtoon</a>
-        <br>
-        <a href="https://signup.bergen.org/dashboard/">BCA Dashboard</a>
-        <br>
-        <a href="https://www.turnitin.com/login_page.asp?lang=en_us">Turnitin</a>
-        <br>
-        <a href="https://yourbcabus.com/school/5bca51e785aa2627e14db459">YourBCABus</a>
-        <br>
-        <a href="https://codingbat.com/java">Coding Bat</a>
-        <br>
-        <a href="https://www.desmos.com/calculator">Desmos</a>
-        <br>
-        <a href="https://bergen.rschoolteams.com/">BCA Athletics</a>
-        <br>
-        <a href="https://www.bergen.org/bca">BCA Website</a>
-        <br>
-        <a href="https://www.symbolab.com/">Symbolab</a>
-        <br>
-        <a href="https://replit.com/">Replit</a>
-        <br>
-        <a href="https://www.timeanddate.com/timer/">Timer/Stopwatch</a>
-
+        <a href="https://www.turnitin.com/login_page.asp?lang=en_us">
+            <img
+            src="https://marketing-tii-statamic-assets-us-west-2.s3-us-west-2.amazonaws.com/logos/default-turnitin-image.png"
+            alt="TurnItIn" 
+            width="100"
+            />
+        </a>
+        <a href="https://yourbcabus.com/school/5bca51e785aa2627e14db459">
+            <img
+            src="https://www.svgheart.com/wp-content/uploads/2023/08/school-bus_488-430-min.png"
+            alt="YourBCABus" 
+            width="100"
+            />
+        </a>
+        <a href="https://www.desmos.com/calculator">
+            <img
+            src="https://play-lh.googleusercontent.com/AcmdHoyslp6AnrSMvDMg1o3tmhIuy0wbd8mN-usvDzhO4hiTHMLIavweYOPKmlpglrY"
+            alt="Desmos" 
+            width="100"
+            />
+        </a>
+        <a href="https://bergen.rschoolteams.com/">
+            BCA Athletics
+        </a>
+        <a href="https://www.bergen.org/bca">
+            BCA Main Website
+        </a>
+        </div>
     </body>
 
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script>M.autoInit();</script>
 </DOCTYPE>
